@@ -1,0 +1,51 @@
+<app-header></app-header>
+<div class="jumbotron">
+    <ng-container *ngIf="!addcheck">
+    <div *ngFor="let option of productlist" class="shadow p-3 mb-5 bg-white rounded">
+
+        <!-- <h4>{{option.productId._id}}</h4>
+        <h4>{{option.productId.title}}</h4>
+        <h4>{{option.productId.desc}}</h4>
+        <h4>{{option.productId.img}}</h4>
+        <h4>{{option.price}}</h4>
+        <h4>{{totalbill}}</h4> -->
+        
+<div class="row">
+    <div class="col-2">
+   <img src={{option.productId.img}} alt="" width="50%">
+    </div>
+    <div class="col-6">
+     <h4>{{option.productId.title}}</h4>
+     <p>{{option.productId.desc}}</p>
+     <p>Qty : &nbsp;{{option.quantity}}</p>
+     <h4>&#x20b9;{{option.price}}</h4>
+    </div>
+  </div>
+  <button type="button" class="btn btn-dark" (click)="deleteproduct(option.productId._id)">Delete Product</button>
+    </div>
+    <h4>Total Price : {{totalbill}}</h4>
+    <button type="button" class="btn btn-dark" (click)="buy()">Click To Buy Item </button>
+     
+    </ng-container>
+    <ng-container *ngIf="addcheck">
+        <h1>Add Your Address</h1>
+        
+        <form [formGroup]="createaddress" (ngSubmit)="addaddress()">
+           
+                
+                    <div class="form-group">
+                        <label for="exampleInputEmail1" style="color: white;">Enter Your Address</label>
+                        <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Your Delovery Address" formControlName="address">
+                      </div>
+                      <button type="submit" class="btn btn-success">Submit Your Address</button>
+                </form>
+            </ng-container>
+            
+             
+    
+</div>
+
+
+
+
+<app-footer></app-footer>

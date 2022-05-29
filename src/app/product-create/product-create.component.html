@@ -1,0 +1,167 @@
+<app-admin-login></app-admin-login>
+<div class="jumbotron" style="background-color: black;" >
+
+  <div class="container bg-light py-5">
+    <h1 style="color: Black;">Add Product Form</h1>
+    
+    <div class="alert alert-success" role="alert" *ngIf="success">
+      <h6 style="color: white;">Product Added to Cart Successfully</h6>
+    </div>
+    
+  <form  [formGroup]="regproduct" (ngSubmit)="addproduct()">
+      <div class="row">
+      <div class="col">
+          <div class="form-group">
+              <label for="exampleInputEmail1" style="color: black;">Enter Product Name</label>
+              <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Your Product Name" formControlName="title">
+            </div>
+      </div>
+          <div class="col">
+              <div class="form-group">
+                  <label for="exampleInputEmail1" style="color: black;">Enter Product Description</label>
+                  <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Your Product Description " formControlName="desc">
+                </div>
+          </div>
+          </div>
+          <div class="row">
+          <div class="col">
+              <div class="form-group">
+                  <label for="exampleInputPassword1" style="color: black;">Enter Image Url</label>
+                  <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Enter Image Url" formControlName="img">
+                </div> 
+          </div>
+          <div class="col">
+          <div class="form-group">
+              <label for="exampleFormControlSelect1">Enter Image Category</label>
+              <select class="form-control" id="exampleFormControlSelect1" formControlName="categories">
+                <option>Mens</option>
+                <option>Womens</option>
+                <option>Kids</option>
+                
+              </select>
+            </div>
+</div>
+</div>
+<div class="row">
+  <div class="col">
+            <div class="form-group">
+              <label for="exampleFormControlSelect1">Size</label>
+              <select class="form-control" id="exampleFormControlSelect1" formControlName="size">
+                <option>S</option>
+                <option>M</option>
+                <option>L</option>
+                <option>XL</option>
+                
+              </select>
+            </div>
+            </div>
+
+            <div class="col">
+              <div class="form-group">
+                  <label for="exampleInputPassword1" style="color: black;">Enter The Colour</label>
+                  <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Enter The Colour" formControlName="color">
+                </div> 
+          </div>
+</div>
+
+          
+              <div class="form-group">
+                  <label for="exampleInputEmail1" style="color: black;">Enter The Price</label>
+                  <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter The Price" formControlName="price">
+                </div>
+          
+
+
+
+
+        
+      
+      
+       
+      <button type="submit" class="btn btn-dark">Submit</button>
+    </form>
+   
+</div>
+
+
+    
+</div>
+<app-footer></app-footer>
+    <!-- <h1 style="color: grey;">Add Product Form</h1>
+      <br><br><br>
+      
+    <form  [formGroup]="regproduct" (ngSubmit)="addproduct()">
+        <div class="row">
+        <div class="col">
+            <div class="form-group">
+                <label for="exampleInputEmail1" style="color: white;">Enter Product Name</label>
+                <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Your Product Name" formControlName="title">
+              </div>
+        </div>
+            <div class="col">
+                <div class="form-group">
+                    <label for="exampleInputEmail1" style="color: white;">Enter Product Description</label>
+                    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Your Product Description " formControlName="desc">
+                  </div>
+            </div>
+            </div>
+            <div class="row">
+            <div class="col">
+                <div class="form-group">
+                    <label for="exampleInputPassword1" style="color: white;">Enter Image Url</label>
+                    <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Enter Image Url" formControlName="img">
+                  </div> 
+            </div>
+            <div class="col">
+            <div class="form-group">
+                <label for="exampleFormControlSelect1">Enter Image Category</label>
+                <select class="form-control" id="exampleFormControlSelect1" formControlName="categories">
+                  <option>Mens</option>
+                  <option>Womens</option>
+                  <option>Kids</option>
+                  
+                </select>
+              </div>
+</div>
+</div>
+<div class="row">
+    <div class="col">
+              <div class="form-group">
+                <label for="exampleFormControlSelect1">Size</label>
+                <select class="form-control" id="exampleFormControlSelect1" formControlName="size">
+                  <option>S</option>
+                  <option>M</option>
+                  <option>L</option>
+                  <option>XL</option>
+                  
+                </select>
+              </div>
+              </div>
+
+              <div class="col">
+                <div class="form-group">
+                    <label for="exampleInputPassword1" style="color: white;">Enter The Colour</label>
+                    <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Enter The Colour" formControlName="color">
+                  </div> 
+            </div>
+</div>
+
+            
+                <div class="form-group">
+                    <label for="exampleInputEmail1" style="color: white;">Enter The Price</label>
+                    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter The Price" formControlName="price">
+                  </div>
+            
+
+
+
+
+          
+        
+        
+         
+        <button type="submit" class="btn btn-success">Submit</button>
+      </form>
+      <br><br><br>
+  </div>
+   -->

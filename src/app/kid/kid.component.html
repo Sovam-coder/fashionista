@@ -1,0 +1,54 @@
+<app-header></app-header>
+
+
+<div class="jumbotron">
+    <ng-container *ngIf="!addcheck">
+        <div class="alert alert-success" role="alert" *ngIf="success">
+            <h6>Product Added to Cart Successfully</h6>
+          </div>
+    <div class="row" >
+            <div class="col" *ngFor="let item of kid" >
+                    <!--Adding-->
+                    <div class="product-card"  >
+                            <div class="product-image">
+                                
+                                <a href={{item.img}}>
+                                <img src={{item.img}} class="product-thumb" alt="" width="80">
+                                </a>
+                            </div>
+                            <div class="product-info container" style="background-color: white">
+                                <h6 class="product-brand" style="color: black">{{item.title}}</h6>
+                                <p class="product-short-des" style="color: black">{{item.desc}}</p>
+                                <span class="price" style="color: black">Price : {{item.price}}</span>
+                                <!--Adding Buuton-->
+                                <div class="row">
+                                    <div class="col">
+                                        <button type="button" class="btn btn-dark" (click)="addcart(item._id)">Add to Cart </button>
+                                    </div>
+                                    <div class="col">
+                                        <button type="button" class="btn btn-dark" (click)="buy(item)">Buy Item </button>
+                                    </div>
+                                  </div>
+                                <!--Ending button-->
+                            </div>
+                        </div>
+                    <!--End-->
+                  </div>
+                </div>
+    </ng-container>
+    <ng-container *ngIf="addcheck">
+<h1>Add Your Address</h1>
+
+<form [formGroup]="createaddress" (ngSubmit)="addaddress()">
+   
+        
+            <div class="form-group">
+                <label for="exampleInputEmail1" style="color: black;">Enter Your Address</label>
+                <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Your Delovery Address" formControlName="address">
+              </div>
+              <button type="submit" class="btn btn-dark">Proceed To Order</button>
+        </form>
+    </ng-container>
+        
+    </div>
+<app-footer></app-footer>

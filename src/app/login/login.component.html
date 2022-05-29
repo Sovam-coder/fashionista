@@ -1,0 +1,33 @@
+
+<div class="jumbotron" style="background-color: black;" >
+  <div class="container bg-light py-5">
+    <h1 style="color: rgb(7, 7, 7);">Login in Fashion Ista</h1>
+      <br>
+      
+    <form [formGroup]="createstudent" (ngSubmit)="addstudent()">
+        <div class="row">
+            <div class="col">
+                <div class="form-group">
+                    <label for="exampleInputEmail1" style="color: black;">Enter Your Email Id</label>
+                    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Your Mail id " formControlName="email">
+                  </div>
+            </div>
+            <div class="col">
+                <div class="form-group">
+                    <label for="exampleInputPassword1" style="color: black;">Enter Your Password</label>
+                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Enter Your Password" formControlName="password">
+                  </div> 
+            </div>
+          </div>
+          
+        
+        
+         
+        <button type="submit" class="btn btn-dark">Submit</button>
+      </form>
+      <br>
+      <a routerLink="/register" style="color: black;">New User Kindle Registartion Here</a>
+      <br><br><br>
+      </div>
+  </div>
+  
