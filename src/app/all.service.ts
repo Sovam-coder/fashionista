@@ -1,4 +1,4 @@
-
+import { baseurl } from 'src/environments/environment';
 import { Injectable } from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 @Injectable({
@@ -11,63 +11,63 @@ export class AllService {
   createstudent(data: any)
   {
     
-    let url="https://fashionista-sovam.herokuapp.com/login";
+    let url=`${baseurl}/login`;
     return this.http.post(url,data);
 
   }
   registerstudent(data:any)
   {
-    let url="https://fashionista-sovam.herokuapp.com/register";
+    let url=`${baseurl}/register`;
     return this.http.post(url,data);
   }
   getitem()
   {
     
-    let url="https://fashionista-sovam.herokuapp.com/items";
+    let url=`${baseurl}/items`;
     return this.http.get(url);
 
   }
   putcart(data: any)
   {
     
-    let url="https://fashionista-sovam.herokuapp.com/cart";
+    let url=`${baseurl}/cart`;
     return this.http.post(url,data);
 
   }
   buyproduct(data:any)
 {
-  let url="https://fashionista-sovam.herokuapp.com/order";
+  let url=`${baseurl}/order`;
   return this.http.post(url,data);
 }
 addproduct(data:any)
   {
-    let url="https://fashionista-sovam.herokuapp.com/create/new";
+    let url=`${baseurl}/create/new`;
     return this.http.post(url,data);
   }
   cart(data:any)
   {
-    let url="https://fashionista-sovam.herokuapp.com/cartitem/${data}";
+    let url=`${baseurl}/cartitem/${data}`;
     return this.http.get(url); 
     
   }
   alluser()
   {
-    let url="https://fashionista-sovam.herokuapp.com/users";
+    let url=`${baseurl}/users`;
     return this.http.get(url);
   }
   allproductshow()
   {
-    let url="https://fashionista-sovam.herokuapp.com/items";
+    let url=`${baseurl}/items`;
     return this.http.get(url);
   }
   allorders()
   {
-    let url="https://fashionista-sovam.herokuapp.com/orders";
+    let url=`${baseurl}/orders`;
     return this.http.get(url);
   }
   modifystatus(data:any)
   {
-    let url="https://fashionista-sovam.herokuapp.com/orders/update";
+    let url=`${baseurl}/orders/update`;
     return this.http.put(url,{orderId:data});
   }
   // productdelete(data:any)
@@ -77,12 +77,12 @@ addproduct(data:any)
   // }
   productdelete(id:any)
   {
-    let url="https://fashionista-sovam.herokuapp.com/deleteitem";
+    let url=`${baseurl}/deleteitem`;
     return this.http.delete(`${url}/${id}`);
   }
   deletecart(data:any)
   {
-    let url="https://fashionista-sovam.herokuapp.com/cartitems";
+    let url=`${baseurl}/cartitems`;
     return this.http.delete(`${url}/${localStorage.getItem('userId')}/${data}`,{responseType: 'text'})
   }
 }
